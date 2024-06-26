@@ -17,8 +17,6 @@ pipeline {
         stage('Test') {
             steps {
                 sh """
-                    #!/bin/bash
-                    ls -lrt
                     sleep 5
 
                 """
