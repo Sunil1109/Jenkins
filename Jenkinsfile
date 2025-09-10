@@ -1,34 +1,35 @@
 pipeline {
     agent any
 
-    environment {
-        NAME = "test env"
-    }
-
-    stages {
-        stage('Build') {
-            steps {
-                sh 'sleep 10'
+    stages{
+        stage{
+            steps('Buuld') {
+                sh
+                '''
+                    sleep 20
+                '''
             }
-
-            
-
         }
-        stage('Test') {
-            steps {
-                sh """
-                    sleep 5
 
-                """
+        stage('test') {
+            steps{
+                sh
+                '''
+                    sleep 20
+                '''
             }
-
-            
-
         }
+
         stage('Deploy') {
-            steps {
-                sh 'sleep 10'
+            steps{
+                sh
+                '''
+                    sleep 20
+                '''
             }
         }
     }
+
+
+
 }
