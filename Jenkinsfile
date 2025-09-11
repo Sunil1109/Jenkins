@@ -1,8 +1,8 @@
 pipeline {
     agent any
 
-    stages{
-        stage{
+    stages {
+        stage {
             steps('Buuld') {
                 sh
                 '''
@@ -12,7 +12,7 @@ pipeline {
         }
 
         stage('test') {
-            steps{
+            steps {
                 sh
                 '''
                     sleep 20
@@ -27,6 +27,10 @@ pipeline {
                     sleep 20
                 '''
             }
+        }
+
+        stage('Post') {
+
         }
     }
 
